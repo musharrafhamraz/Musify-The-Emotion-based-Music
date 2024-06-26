@@ -1,11 +1,11 @@
 
-## Musify
+# Musify
 
-# Overview
+## Overview
 
 Welcome to Musify – the innovative music recommendation app that uses artificial intelligence to harmonize your emotions with the perfect soundtrack. Musify captures your facial expressions, interprets your current mood, and instantly curates a playlist to complement your emotional state.
 
-# Features
+## Features
 
 Emotion-Based Recommendations: Musify utilizes advanced AI to analyze facial expressions and detect emotions such as happiness, sadness, excitement, and calmness.
 
@@ -18,7 +18,7 @@ Extensive Music Library: Access a vast library of songs spanning multiple genres
 User-Friendly Interface: Simple and intuitive design makes it easy for anyone to use and enjoy.
 
 
-# How It Works
+## How It Works
 
 Launch the App: Open Musify on your device.
 
@@ -31,7 +31,7 @@ Playlist Generation: Based on the detected emotion, Musify curates a playlist th
 Enjoy the Music: Sit back and let the music play!
 
 
-# Roadmap
+## Roadmap
 Enhanced Emotion Detection: Integrate more nuanced emotion analysis for even better music recommendations.
 
 Voice Commands: Allow users to control the app and make song requests through voice commands.
@@ -42,7 +42,7 @@ License
 
 ### Musify is released under the MIT License.
 
-# Contact
+## Contact
 For any inquiries or feedback, please reach out to us:
 
 Email: musharrafhamraz02@gmail.com
