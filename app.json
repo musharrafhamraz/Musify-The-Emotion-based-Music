@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "DTreaty",
+    "slug": "Disease-Detection-App",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Icons/app.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Icons/app.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ],
+      [
+        "@react-native-firebase/app",
+        "@react-native-firebase/auth"
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "permissions": [
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
