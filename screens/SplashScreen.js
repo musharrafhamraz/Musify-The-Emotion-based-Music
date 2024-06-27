@@ -32,9 +32,9 @@ const SplashScreenComponent = ({ navigation }) => {
             >
                 <Text style={styles.headtext}>Musify</Text>
                 <Text style={styles.text}>Listen to Your Mood</Text>
-                <View style={styles.bottomcontainer}>
+                {/* <View style={styles.bottomcontainer}>
                     <Text>Meri Jaan tune mujhe ko pagal hai kiya mera lagda na jiya tere bagair tu maan meri jaan</Text>
-                </View>
+                </View> */}
             </ImageBackground>
         </SafeAreaView>
 

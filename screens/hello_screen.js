@@ -139,7 +139,8 @@ const MusicPlayer = ({ route }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Playing: {label}</Text>
+      <Text style={styles.title1}>Enjoy Your Mood</Text>
+      <Text style={styles.title}>Playing {label} Music</Text>
       <Image source={require('../assets/Icons/music1.png')} style={styles.image} />
       <View style={styles.controls}>
         <TouchableOpacity onPress={stopAudio}>
@@ -172,6 +173,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
+  title1: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
   label: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -182,6 +189,7 @@ const styles = StyleSheet.create({
   image: {
     width: 300,
     height: 300,
+    marginVertical:60,
     marginBottom: 20,
     borderRadius: 10,
   },
@@ -189,6 +197,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
-    marginTop: 20,
+    marginTop: 50,
   },
 });
