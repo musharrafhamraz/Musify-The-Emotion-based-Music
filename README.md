@@ -40,8 +40,6 @@ Social Features: Share your current mood and playlist with friends and discover 
 License
 
 
-### Musify is released under the MIT License.
-
 ## Contact
 For any inquiries or feedback, please reach out to us:
 

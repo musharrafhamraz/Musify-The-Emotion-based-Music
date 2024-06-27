@@ -1,11 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Audio } from 'expo-av';
-import { useRoute } from '@react-navigation/native'; // Import useRoute
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const MusicPlayer = () => {
-  const route = useRoute(); // Use useRoute to get the navigation parameters
+// Emotion folders mapping
+const emotions = {
+  sad: 'sad',
+  happy: 'happy',
+  surprised: 'surprised',
+  neutral: 'neutral',
+  fearful: 'fearful',
+  angry: 'angry',
+};
+
+// Songs for each emotion
+const songs = {
+  sad: [
+    require('../assets/songs/sad/Lost-Boys.mp3'),
+    require('../assets/songs/happy/happy1.mp3'),
+    require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
+    // require('../assets/songs/sad/sad2.mp3'),
+    // Add more songs as needed
+  ],
+  happy: [
+    require('../assets/songs/happy/happy1.mp3'),
+    require('../assets/songs/fearful/Takyon-(Death-Yon).mp3'),
+    require('../assets/songs/angry/No-Love.mp3'),
+    // require('../assets/songs/happy/happy2.mp3'),
+    // Add more songs as needed
+  ],
+  surprised: [
+    require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
+    require('../assets/songs/happy/happy1.mp3'),
+    // require('../assets/songs/surprised/surprised2.mp3'),
+    // Add more songs as needed
+  ],
+  neutral: [
+    require('../assets/songs/neutral/Ive-Seen-Footage.mp3'),
+    require('../assets/songs/neutral/song1.mp3'),
+    require('../assets/songs/angry/No-Love.mp3'),
+    // Add more songs as needed
+  ],
+  fearful: [
+    require('../assets/songs/fearful/Takyon-(Death-Yon).mp3'),
+    require('../assets/songs/angry/No-Love.mp3'),
+    require('../assets/songs/happy/happy1.mp3'),
+    require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
+    // require('../assets/songs/fearful/fearful2.mp3'),
+    // Add more songs as needed
+  ],
+  angry: [
+    require('../assets/songs/angry/No-Love.mp3'),
+    require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
+    require('../assets/songs/fearful/Takyon-(Death-Yon).mp3'),
+    require('../assets/songs/happy/happy1.mp3'),
+    // require('../assets/songs/angry/angry2.mp3'),
+    // Add more songs as needed
+  ],
+};
+
+const MusicPlayer = ({ route }) => {
   const { label } = route.params; // Extract the label parameter
 
   const [sound, setSound] = useState(null);
@@ -16,14 +70,32 @@ const MusicPlayer = () => {
   useEffect(() => {
     const loadAndPlayAudio = async () => {
       try {
+        const emotionFolder = emotions[label.toLowerCase()];
+        if (!emotionFolder) {
+          console.warn(`No song folder found for label: ${label}`);
+          return;
+        }
+
+        // Get the list of songs for the given emotion
+        const songList = songs[emotionFolder];
+        if (!songList) {
+          console.warn(`No songs available for emotion: ${emotionFolder}`);
+          return;
+        }
+
+        // Select a random song from the list
+        const randomSongIndex = Math.floor(Math.random() * songList.length);
+        const randomSong = songList[randomSongIndex];
+
+        // Load and play the selected song
         const { sound: loadedSound } = await Audio.Sound.createAsync(
-          require('../assets/song1.mp3'),
+          randomSong,
           { shouldPlay: true, isLooping: isLooping }
         );
         setSound(loadedSound);
         loadedSound.setOnPlaybackStatusUpdate(setStatus);
       } catch (error) {
-        console.error('Error loading or playing audio', error);
+        console.error('Error loading or playing audio:', error);
       }
     };
 
@@ -34,11 +106,11 @@ const MusicPlayer = () => {
         sound.unloadAsync();
       }
     };
-  }, [isLooping]);
+  }, [label, isLooping]);
 
   const togglePlayPause = async () => {
     if (sound) {
-      if (status.isPlaying) {
+      if (status?.isPlaying) {
         await sound.pauseAsync();
       } else {
         await sound.playAsync();
@@ -67,12 +139,8 @@ const MusicPlayer = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Muhabbat ab main na karonga kisi ko</Text>
-      <Text style={styles.label}>Predicted Label:{label}</Text> {/* Display the passed label */}
-      <Image
-        source={require('../assets/Icons/music1.png')}
-        style={styles.image}
-      />
+      <Text style={styles.title}>Playing: {label}</Text>
+      <Image source={require('../assets/Icons/music1.png')} style={styles.image} />
       <View style={styles.controls}>
         <TouchableOpacity onPress={stopAudio}>
           <Icon name="stop" size={40} color="#000" />
@@ -87,6 +155,8 @@ const MusicPlayer = () => {
     </View>
   );
 };
+
+export default MusicPlayer;
 
 const styles = StyleSheet.create({
   container: {
@@ -122,5 +192,3 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
-
-export default MusicPlayer;

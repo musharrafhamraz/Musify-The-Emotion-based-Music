@@ -9,7 +9,7 @@ const SplashScreenComponent = ({ navigation }) => {
       useEffect(() => {
       
         setTimeout(() => {
-          navigation.replace('Home');
+          navigation.replace('Model');
         }, 2000);
       }, [navigation]);
     const [fontsLoaded] = useFonts({
