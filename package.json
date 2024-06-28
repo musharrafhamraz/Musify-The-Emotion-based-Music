@@ -30,7 +30,6 @@
     "expo-camera": "~13.4.4",
     "expo-constants": "~14.4.2",
     "expo-image-manipulator": "~11.3.0",
-    "expo-image-picker": "~14.3.2",
     "expo-media-library": "~15.4.1",
     "expo-permissions": "~14.2.1",
     "expo-status-bar": "~1.6.0",
@@ -42,7 +41,6 @@
     "react-native": "0.72.10",
     "react-native-config": "^1.5.1",
     "react-native-elements": "^3.4.3",
-    "react-native-geolocation-service": "^5.3.1",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-image-base64": "^0.1.4",
     "react-native-maps": "1.7.1",
@@ -55,11 +53,8 @@
     "react-native-swiper": "^1.6.0",
     "react-native-vector-icons": "^10.0.3",
     "react-native-web": "~0.19.6",
-    "react-native-webview": "13.2.2",
-    "react-native-youtube-iframe": "^2.3.0",
-    "translate": "^3.0.0",
-    "undefined": ".expo-dev-client",
-    "expo-splash-screen": "~0.20.5"
+    "react-native-webview": "13.2.2"
+    
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
