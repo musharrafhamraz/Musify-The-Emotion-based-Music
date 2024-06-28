@@ -1,4 +1,5 @@
-import React from 'react';
+import { AppRegistry } from 'react-native';
+import * as React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as tf from "@tensorflow/tfjs";
@@ -10,6 +11,7 @@ import OfflineClassifierV2 from './screens/OfflinePredV2';
 
 const Stack = createNativeStackNavigator();
 
+
 const App = () => (
   <NavigationContainer>
     <Stack.Navigator initialRouteName="Splash">
@@ -17,16 +19,16 @@ const App = () => (
       {/* <Stack.Screen name="Walkthrough" component={WalkthroughScreen} options={{ headerShown: false }} /> */}
       <Stack.Screen name="Model" component={OfflineClassifierV2} options={{ headerShown: false }} />
       <Stack.Screen name="hello" component={MusicPlayer} options={{
-            headerShown: true,
-            title: 'Songs',
-            headerStyle: {
-              backgroundColor: '#4DB129', // Background color
-            },
-            headerTintColor: '#fff', // Text color
-            headerTitleStyle: {
-              fontWeight: 'bold', // Title text style
-            },  
-          }} />
+        headerShown: true,
+        title: 'Songs',
+        headerStyle: {
+          backgroundColor: '#4DB129', // Background color
+        },
+        headerTintColor: '#fff', // Text color
+        headerTitleStyle: {
+          fontWeight: 'bold', // Title text style
+        },
+      }} />
     </Stack.Navigator>
   </NavigationContainer>
 );

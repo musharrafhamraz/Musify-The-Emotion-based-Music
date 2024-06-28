@@ -10,7 +10,7 @@ const SplashScreenComponent = ({ navigation }) => {
       
         setTimeout(() => {
           navigation.replace('Model');
-        }, 2000);
+        }, 6000);
       }, [navigation]);
     const [fontsLoaded] = useFonts({
         "Merriweather-Bold": require("../assets/fonts/Merriweather-Bold.ttf"),
