@@ -19,43 +19,32 @@ const songs = {
     require('../assets/songs/sad/Lost-Boys.mp3'),
     require('../assets/songs/happy/happy1.mp3'),
     require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
-    // require('../assets/songs/sad/sad2.mp3'),
-    // Add more songs as needed
   ],
   happy: [
     require('../assets/songs/happy/happy1.mp3'),
     require('../assets/songs/fearful/Takyon-(Death-Yon).mp3'),
     require('../assets/songs/angry/No-Love.mp3'),
-    // require('../assets/songs/happy/happy2.mp3'),
-    // Add more songs as needed
   ],
   surprised: [
     require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
     require('../assets/songs/happy/happy1.mp3'),
-    // require('../assets/songs/surprised/surprised2.mp3'),
-    // Add more songs as needed
   ],
   neutral: [
     require('../assets/songs/neutral/Ive-Seen-Footage.mp3'),
     require('../assets/songs/neutral/song1.mp3'),
     require('../assets/songs/angry/No-Love.mp3'),
-    // Add more songs as needed
   ],
   fearful: [
     require('../assets/songs/fearful/Takyon-(Death-Yon).mp3'),
     require('../assets/songs/angry/No-Love.mp3'),
     require('../assets/songs/happy/happy1.mp3'),
     require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
-    // require('../assets/songs/fearful/fearful2.mp3'),
-    // Add more songs as needed
   ],
   angry: [
     require('../assets/songs/angry/No-Love.mp3'),
     require('../assets/songs/surprised/The-Fever-(Aye-Aye).mp3'),
     require('../assets/songs/fearful/Takyon-(Death-Yon).mp3'),
     require('../assets/songs/happy/happy1.mp3'),
-    // require('../assets/songs/angry/angry2.mp3'),
-    // Add more songs as needed
   ],
 };
 

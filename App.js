@@ -1,4 +1,3 @@
-import { AppRegistry } from 'react-native';
 import * as React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -20,11 +19,11 @@ const App = () => (
         headerShown: true,
         title: 'Songs',
         headerStyle: {
-          backgroundColor: '#4DB129', // Background color
+          backgroundColor: '#4DB129',
         },
-        headerTintColor: '#fff', // Text color
+        headerTintColor: '#fff',
         headerTitleStyle: {
-          fontWeight: 'bold', // Title text style
+          fontWeight: 'bold',
         },
       }} />
     </Stack.Navigator>

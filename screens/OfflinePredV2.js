@@ -145,13 +145,9 @@ const OfflineClassifierV2 = () => {
         <Text style={{ alignSelf: 'center', fontSize: 30, fontWeight: '700' }}>Enjoy Your Music</Text>
       </View>
       <View style={styles.cameraWrapper}>
-        
           <Camera ref={cameraRef} type={type} style={styles.camera}>
             <View style={styles.buttonContainer1}>
               <FaceOverlay/>
-              {/* <TouchableOpacity style={styles.button} onPress={takePicture} disabled={loading}>
-                <AntDesign name="camerao" size={24} color="white" />
-              </TouchableOpacity> */}
             </View>
           </Camera>
       </View>
@@ -167,12 +163,6 @@ const OfflineClassifierV2 = () => {
           )}
         </View>
       </TouchableOpacity>
-      {/* {label ? (
-        <Text style={styles.labelText}>The Predicted Label is {label}</Text>
-      ) : (
-        <Text style={styles.labelText}></Text>
-      )} */}
-      
     </View>
   );
 };

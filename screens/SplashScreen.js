@@ -1,7 +1,5 @@
-// src/screens/SplashScreen.js
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, ImageBackground, Image } from 'react-native';
-
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useFonts } from "expo-font";
 
@@ -32,12 +30,8 @@ const SplashScreenComponent = ({ navigation }) => {
             >
                 <Text style={styles.headtext}>Musify</Text>
                 <Text style={styles.text}>Listen to Your Mood</Text>
-                {/* <View style={styles.bottomcontainer}>
-                    <Text>Meri Jaan tune mujhe ko pagal hai kiya mera lagda na jiya tere bagair tu maan meri jaan</Text>
-                </View> */}
             </ImageBackground>
         </SafeAreaView>
-
     );
 };
 
@@ -47,7 +41,6 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         flex: 1,
-        // justifyContent: 'center',
         alignItems: 'left',
     },
     bottomcontainer: {
